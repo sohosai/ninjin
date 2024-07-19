@@ -79,7 +79,7 @@ jobs:
           STACK_NAME: "ninjin"
           STACK_TYPE: 2
           ENDPOINT_ID: 2
-          COMPOSE_FILE: "docker-compose-cd.yml"
+          COMPOSE_FILE: "docker-compose-cd.yaml"
           PRUNE: "true"
           PULL_IMAGE: "true"
           VERIFY_SSL: "true"
