@@ -7,6 +7,10 @@ on:
     types:
       - closed
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   push-image:
     if: github.event.pull_request.merged == true
