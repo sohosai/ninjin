@@ -1,5 +1,5 @@
 # ninjin
-slackに送信した内容をdiscordに転送します
+slackに送信した内容をdiscordに転送します。
 
 対応したもの
  - メッセージの転送
