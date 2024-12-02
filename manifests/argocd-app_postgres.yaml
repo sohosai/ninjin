@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ninjin-postgres
+spec:
+  project: default
+  sources:
+    - chart: cpostgresql
+      repoURL: https://charts.bitnami.com/bitnami
+      targetRevision: 16.2.3
+      helm:
+        valueFiles:
+          - $repo/manifests/postgres.yaml
+    - repoURL: 'https://github.com/sohosai/ninjin.git'
+      targetRevision: HEAD
+      ref: repo
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true

@@ -1,0 +1,5 @@
+auth: 
+  enablePostgresUser: false
+  username: "root"
+  password: "password"
+  database: "Database"
